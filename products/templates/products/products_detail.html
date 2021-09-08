@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Product Detail View</h3>
+
+<h3>{{ object.name }}</h3>
+<div>
+  <p>{{object.ingredients}}</p>
+  <p>{{object.price}}</p>
+</div>
+<div>
+    <a href="{% url 'product-delete' object.id %}">Delete Product</a>
+    <a href="{% url 'product-update' object.id %}">Update Product</a>
+</div>
+
+{% endblock %}
